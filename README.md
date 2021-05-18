@@ -14,7 +14,9 @@ With the magic of [Codemagic](https://codemagic.io), you can build, test, and pu
 
 For more information, visit the [Codemagic api docs](https://docs.codemagic.io/rest-api/overview/) setup guide.
 
-# Install with `pip`
+# Installation
+
+To install Codemagic Python SDK, simply execute the following command in a terminal:
 
 ```shell script
 pip install codemagic
