@@ -47,6 +47,6 @@ class Codemagic:
 
         keys['_id'] = 'pk'
         for key in keys:
-            if hasattr(build, keys[key]):
+            if hasattr(build, keys[key]) and build_dict.get(key, None):
                 setattr(build, keys[key], build_dict[key])
         return build
