@@ -1,7 +1,5 @@
-import json
-
-from .utils import send_get_request, send_post_request, get_codemagic_url, prepare_headers, camel_to_snake
 from .builds import Build
+from .utils import send_get_request, send_post_request, get_codemagic_url, prepare_headers, camel_to_snake
 
 
 class Codemagic:
@@ -17,7 +15,6 @@ class Codemagic:
             'environment': environment,
         }
         response = send_post_request(get_codemagic_url('/builds'), data=data, headers=prepare_headers(self.token))
-        print(response)
         return self.get_build(response.get("buildId"))
 
     def list_of_builds(self, app_id=None, workflow_id=None, branch=None, tag=None) -> [Build]:
