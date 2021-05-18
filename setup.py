@@ -36,5 +36,6 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
     install_requires=[
+        'requests>=2.2.0',
     ],
 )
