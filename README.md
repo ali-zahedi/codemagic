@@ -22,8 +22,11 @@ To install Codemagic Python SDK, simply execute the following command in a termi
 pip install codemagic
 ```
 
-# How to use it?
+# Usage
 
+# Supported Python Versions
+
+We currently support Python 3.6+.
 
 # TODO
 
