@@ -14,14 +14,49 @@ With the magic of [Codemagic](https://codemagic.io), you can build, test, and pu
 
 For more information, visit the [Codemagic api docs](https://docs.codemagic.io/rest-api/overview/) setup guide.
 
-# Install with `pip`
+# Installation
+
+To install Codemagic Python SDK, simply execute the following command in a terminal:
 
 ```shell script
 pip install codemagic
 ```
 
-# How to use it?
+# Usage
 
+First of all you need to get token. The access token is available via the Codemagic UI in  **User settings > Integrations > Codemagic API > Show**.
+
+1. Create Codemagic instance
+
+    ```python
+    from codemagic import Codemagic, Build, BuildStatus
+    
+    codemagic = Codemagic(token=token)
+    ```
+   
+1. Create `build`.
+
+   ```python
+   build: Build = codemagic.start_build(app_id=app_id, workflow_id=workflow_id, branch=branch, environment=environment)      
+   if build.status == BuildStatus.QUEUED:
+       print("Build request start success.")
+   ```
+    
+1. Get `list build`. You can filter `builds` base on parameters.
+
+    ```python
+    builds: [Build] = codemagic.list_of_builds()
+    ```
+
+1. Get `details of build`.
+
+    ```python
+    build: Build = codemagic.get_build(pk=pk)
+    ```
+
+# Supported Python Versions
+
+We currently support Python 3.6+.
 
 # TODO
 
