@@ -10,12 +10,13 @@ class BuildStatus(Choices):
     FAILED = 'failed'
     CANCELED = 'canceled'
     QUEUED = 'queued'
+    NOT_FOUND = 'not_found'
 
 
 class Build:
     pk: str = None
     app: Application = None
-    status: BuildStatus = None
+    status: BuildStatus = BuildStatus.NOT_FOUND
     workflow_id: str = None
     started_at: datetime = None
 
