@@ -6,8 +6,12 @@ from codemagic.enums import Choices
 
 class BuildStatus(Choices):
     PREPARING = 'preparing'
-    FINISHED = 'finished'
+    FETCHING = 'fetching'
+    TESTING = 'testing'
+    PUBLISHING = 'publishing'
     BUILDING = 'building'
+    CLEANING = 'cleaning'
+    FINISHED = 'finished'
     FAILED = 'failed'
     CANCELED = 'canceled'
     QUEUED = 'queued'
